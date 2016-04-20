@@ -8,6 +8,12 @@
           $("h2").click(function (){
             $(".section-one").toggleClass("hide");
         });
+          $("h3").click(function (){
+            $(".section-two").toggleClass("hide");
+          });
+          $("#paintings").click(function(){
+            $(".images").toggleClass("hide");
+          });
         });
       </script>
 
@@ -29,17 +35,26 @@
           text-decoration:underline;
           cursor:alias;
         }
+        .main{
+          float:left;
+        }
+        .images{
+          float:right;
+          width:500px;
+          height:500px;
+          background-color:red
+        }
 
       </style>
 
     </head>
     <body>
+      <div class = "main">
       <h1>ian myers</h1>
-      <div>
       <div class = "work">
       <h2>Work</h2>
         <section class = "section-one hide">
-          <h4>Paintings</h4>
+          <h4 id = "paintings">Paintings</h4>
           <h4><em>How to Flip a Coin</em></h4>
         </div>
       </div>
@@ -50,5 +65,6 @@
       </div>
       <div class = "web design"></div>
     </div>
+      <div class = "images hide"></div>
     </body>
   </html>
