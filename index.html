@@ -6,7 +6,7 @@
       <script>
         $(document).ready(function (){
           $("h2").click(function (){
-            $(".section-one").removeClass("hide");
+            $(".section-one").toggleClass("hide");
         });
         });
       </script>
@@ -19,7 +19,10 @@
           margin-left:20px;
         }
         .section-one{
-          transition: all 5s ease;
+          -webkit-transition: width 2s ease, height 2s ease;
+	         -moz-transition: width 2s ease, height 2s ease;
+	        -o-transition: width 2s ease, height 2s ease;
+	          transition: width 2s ease, height 2s ease;
         }
         .section-one : target{
           margin-left:40px;
