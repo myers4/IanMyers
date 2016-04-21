@@ -1,43 +1,125 @@
 <!DOCTYPE html>
   <html>
     <head>
-      <title>Ian Myers</title>
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-      
+      <title></title>
+      <script src="https://code.jquery.com/jquery-latest.min.js"></script>
       <script>
         $(document).ready(function (){
           $("h2").click(function (){
-            $(".section-one").removeClass("hide");
+            $(".section-one").toggleClass("hide");
         });
+          $("h3").click(function (){
+            $(".section-two").toggleClass("hide");
+          });
+          $("#paintings").click(function(){
+            $(".images").toggleClass("hide");
+          });
         });
       </script>
 
       <style>
+        #total{
+          margin:auto;
+          margin-left:15px;
+          margin-right:15px;
+        }
         .hide{
           display:none;
         }
         body{
           margin-left:20px;
+          font-family:monospace;
+        }
+        .section-one {
+          width:100px;
+          height:100px;
+        }
+
+        h1 h2 h3 h4{
+          margin-top margin-bottom:-20px;
+          position:fixed;
+        }
+        h2:hover{
+          text-decoration:underline;
+          cursor:pointer;
+        }
+        h3:hover{
+          text-decoration:underline;
+          cursor:pointer;
+        }
+        h4:hover{
+          text-decoration:underline;
+          cursor:pointer;
+        }
+        .main{
+          float:left;
+        }
+        li{
+          padding:1%;
+          margin:2%;
+          float:right;
+          position:relative;
+          background-color:white;
+          max-width:215px;
+        }
+        img{
+          height:200px;
+          display:inline-block;
+        }
+        img:hover{
+          background-color:yellow;
+          padding:5px;
+          cursor:pointer;
+        }
+        ul{
+          list-style:none;
+          margin:auto;
+          width:1000px;
+          height:1000px;
         }
       </style>
 
     </head>
     <body>
+      <div id = "total">
+      <div class = "main">
       <h1>ian myers</h1>
-      <div>
-      <div class = "work">
-      <h2>Work</h2>
-        <section class = "section-one hide">
-          <h3>Paintings</h3>
-          <h3><em>How to Flip a Coin</em></h3>
-        </div>
-      </div>
-
       <div class = "contact">
         <h3>Contact</h3>
           <section class = "section-two hide">ianjm94@gmail.com</div>
+            <!--include comment section?-->
+      <div class = "work">
+      <h2>Work</h2>
+        <section class = "section-one hide">
+          <h4 id = "paintings">Paintings</h4>
+            <ul class = "images hide">
+                <li><img src="stripe.jpg"/></li>
+                <li><img src="sun.jpg"/></li>
+                <li><img src="rain.jpg"/></li>
+                <li><img src="posts.jpg"/></li>
+                <li><img src="trees.jpg"/></li>
+                <li><img src="windows.jpg"/></li>
+                <li><img src="shadow.jpg"/></li>
+                <li><img src="toe.jpg"/></li>
+                <li><img src="utt.jpg"/></li>
+                <li><img src="mirror.jpg"/></li>
+                <li><img src="checkers.jpg"/></li>
+                <li><img src="island.jpg"/></li>
+                <li><img src="plant.jpg"/></li>
+                <li><img src="eight.jpg"/></li>
+                <li><img src="thirteen.jpg"/></li>
+                <li><img src="nine.jpg"/></li>
+                <li><img src="ninenine.jpg"/></li>
+                <li><img src="fifteen.jpg"/></li>
+                <li><img src="seven.jpg"/></li>
+                <li><img src="one.jpg"/></li>
+                <li><img src="four.jpg"/><li>
+            </ul>
+          <h4><em>How to Flip a Coin</em></h4>
+        </div>
       </div>
-      <div class = "web design"></div>
     </div>
+    </div>
+  </div>
     </body>
   </html>
