@@ -14,9 +14,15 @@
           $("#paintings").click(function(){
             $(".images").toggleClass("hide");
           });
-          $("#one").click(function(){
-            $("img").addClass("imgclick");
-          });
+          var $img = $('img'); // finds all image tags
+
+$img.click(function resize(e) { // bind click event to all images
+  $img.css({ // resize the image
+     height: '300px',
+     width: '300px'
+  });
+});
+
         });
       </script>
 
@@ -78,7 +84,7 @@
         }
         .imgclick{
           max-height:600px;
-          
+
           position:relative;
         }
         ul{
