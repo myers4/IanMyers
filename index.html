@@ -14,6 +14,9 @@
           $("#paintings").click(function(){
             $(".images").toggleClass("hide");
           });
+          $("img").click(function(){
+            $(".images").toggleClass("imgclick");
+          });
         });
       </script>
 
@@ -73,6 +76,10 @@
           cursor:pointer;
 
         }
+        .imgclick{
+          max-width:600px;
+          max-height:600px;
+        }
         ul{
           list-style:none;
           margin:auto;
@@ -107,7 +114,7 @@
                 <li><img src="mirror.jpg"/></li>
                 <li><img src="checkers.jpg"/></li>
                 <li><img src="island.jpg"/></li>
-              
+
             </ul>
           <h4><em>How to Flip a Coin</em></h4>
         </div>
