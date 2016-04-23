@@ -15,11 +15,12 @@
             $(".images").toggleClass("hide");
           });
           var $img = $('img'); // finds all image tags
-
-$img.click(function resize(e) { // bind click event to all images
-  $img.css({ // resize the image
-     height: '300px',
-     width: '300px'
+          $img.click(function resize(e) { // bind click event to all images
+            $img.css({ // resize the image
+              max-height: '600px',
+              max-width: '600px',
+              z-index: '-1',
+              position:'relative'
   });
 });
 
