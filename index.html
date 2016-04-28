@@ -7,23 +7,16 @@
         $(document).ready(function (){
           $("h2").click(function (){
             $(".section-one").toggleClass("hide");
-        });
+          });
           $("h3").click(function (){
             $(".section-two").toggleClass("hide");
           });
-          $("#paintings").click(function(){
+          $("#I").click(function(){
             $(".images").toggleClass("hide");
           });
-          var $img = $('img'); // finds all image tags
-          $img.click(function resize(e) { // bind click event to all images
-            $img.css({ // resize the image
-              maxheight: '600px',
-              maxwidth: '600px',
-              zindex:'1001'
-  });
-});
-
         });
+
+
       </script>
 
       <style>
@@ -104,7 +97,7 @@
       <div class = "work">
       <h2>Work</h2>
         <section class = "section-one hide">
-          <h4 id = "paintings">Paintings</h4>
+          <h4 id = "I">I</h4>
             <ul class = "images hide">
                 <li><img id ="one" src="stripe.jpg"/></li>
                 <li><img id ="two" src="sun.jpg"/></li>
