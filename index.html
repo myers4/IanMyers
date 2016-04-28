@@ -2,28 +2,25 @@
   <html>
     <head>
       <title>ian_myers</title>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
       <script src="https://code.jquery.com/jquery-latest.min.js"></script>
       <script>
         $(document).ready(function (){
           $("h2").click(function (){
             $(".section-one").toggleClass("hide");
-        });
+          });
           $("h3").click(function (){
             $(".section-two").toggleClass("hide");
           });
-          $("#paintings").click(function(){
+          $("#I").click(function(){
             $(".images").toggleClass("hide");
           });
-          var $img = $('img'); // finds all image tags
-          $img.click(function resize(e) { // bind click event to all images
-            $img.css({ // resize the image
-              maxheight: '600px',
-              maxwidth: '600px',
-              zindex:'1001'
-  });
-});
-
+          $("#howto").click(function(){
+            $(".show").toggleClass("hide");
+          });
         });
+
+
       </script>
 
       <style>
@@ -37,7 +34,7 @@
         }
         body{
           margin-left:20px;
-          font-family:monospace;
+          font-family:"Oswald", sans-serif;
         }
         .section-one {
           width:100px;
@@ -47,6 +44,28 @@
         h1 h2 h3 h4{
           margin-top margin-bottom:-20px;
           position:fixed;
+        }
+        h1{
+          font-weight:300;
+          font-size:50px;
+          text-shadow:2px 2px 2px #aaa;
+        }
+        h2{
+          font-weight:300;
+          font-size:50px;
+        }
+        h3{
+          font-weight:300;
+          font-size:20px;
+        }
+        h4{
+          font-weight:300;
+          font-size:30px;
+          margin-left:15px;
+        }
+        #howto{
+          font-size:20px;
+          font-weight:300;
         }
         h2:hover{
           text-decoration:underline;
@@ -71,19 +90,22 @@
           background-color:white;
 
         }
+        p{
+          text-align:center;
+          padding:5px;
+          font-weight:400;
+          font-size:18px;
+        }
         img{
           display:inline-block;
-          width:90%;
+          width:100%;
           height:auto;
           margin:auto;
           padding:15px;
 
         }
-        img:hover{
-          background-color:yellow;
-          padding:5px;
-          cursor:pointer;
-        }
+
+
         ul{
           list-style:none;
           margin:auto;
@@ -96,31 +118,56 @@
     <body>
       <div id = "total">
       <div class = "main">
-      <h1>ian myers</h1>
+      <h1>IAN MYERS</h1>
       <div class = "contact">
-        <h3>Contact</h3>
-          <section class = "section-two hide">ianjm94@gmail.com</div>
+        <h3>Contact/Education</h3>
+          <section class = "section-two hide"><p>ianjm94@gmail.com</p><p>Cooper Union, 2016</p></div>
             <!--include comment section?-->
       <div class = "work">
       <h2>Work</h2>
         <section class = "section-one hide">
-          <h4 id = "paintings">Paintings</h4>
+          <h4 id = "I">I</h4>
             <ul class = "images hide">
-                <li><img id ="one" src="stripe.jpg"/></li>
-                <li><img id ="two" src="sun.jpg"/></li>
-                <li><img id = "three"src="rain.jpg"/></li>
-                <li><img id = "four" src="posts.jpg"/></li>
-                <li><img id = "five" src="trees.jpg"/></li>
-                <li><img id = "six" src="windows.jpg"/></li>
-                <li><img id = "seven" src="shadow.jpg"/></li>
-                <li><img id = "eight" src="checkers.jpg"/></li>
-                <li><img id = "nine" src="toe.jpg"/></li>
-                <li><img id = "ten" src="utt.jpg"/></li>
-                <li><img id = "eleven" src="mirror.jpg"/></li>
-                <li><img id = "twelve" src="island.jpg"/></li>
+                <li><img id ="one" src="stripe.jpg"/><p>Oil on Burlap on Board, 22x24</p></li>
+                <li><img id ="two" src="sun.jpg"/><p>Oil on Burlap on Board, 22x24</p></li>
+                <li><img id = "three"src="rain.jpg"/><p>Oil on Burlap on Board, 20x24</p></li>
+                <li><img id = "four" src="posts.jpg"/><p>Oil on Canvas on Board, 20x15.5</p></li>
+                <li><img id = "five" src="thirteen.jpg"/><p>Oil on Canvas on Board, 12x12</p></li>
+                <li><img id = "six" src="windows.jpg"/><p>Oil on Burlap on Board, 9x12</p></li>
+                <li><img id = "seven" src="shadow.jpg"/><p>Oil on Burlap on Board, 20x24</p></li>
+                <li><img id = "eight" src="checkers.jpg"/><p>Oil on Burlap on Board, 24x26.5</p></li>
+                <li><img id = "nine" src="trees.jpg"/><p>Oil on Canvas on Board, 9x12</p></li>
+                <li><img id = "ten" src="utt.jpg"/><p>Oil on Burlap on Board, 22x24</p></li>
+                <li><img id = "eleven" src="mirror.jpg"/><p>Oil on Paper mounted on Card Board, 9x7</p></li>
+                <li><img id = "twelve" src="eight.jpg"/><p>Oil on Canvas on Board, 9x7</p></li>
 
             </ul>
-          <h4><em>How to Flip a Coin</em></h4>
+          <h4 id = "howto"><em>How to Flip a Coin</em></h4>
+            <ul class = "show hide">
+              <li><img src = "IMG_0541.JPG"/></li>
+              <li><img src = "IMG_0542.JPG"/></li>
+              <li><img src = "IMG_0543.JPG"/></li>
+              <li><img src = "IMG_0545.JPG"/></li>
+              <li><img src = "IMG_0547.JPG"/></li>
+              <li><img src = "IMG_0549.JPG"/></li>
+              <li><img src = "IMG_0554.JPG"/></li>
+              <li><img src = "IMG_0556.JPG"/></li>
+              <li><img src = "IMG_0557.JPG"/></li>
+              <li><img src = "IMG_0563.JPG"/></li>
+              <li><img src = "IMG_0564.JPG"/></li>
+              <li><img src = "IMG_0565.JPG"/></li>
+              <li><img src = "IMG_0566.JPG"/></li>
+              <li><img src = "IMG_0568.JPG"/></li>
+              <li><img src = "IMG_0570.JPG"/></li>
+              <li><img src = "IMG_0571.JPG"/></li>
+              <li><img src = "IMG_0579.JPG"/></li>
+              <li><img src = "IMG_0583.JPG"/></li>
+              <li><img src = "IMG_0584.JPG"/></li>
+              <li><img src = "IMG_0585.JPG"/></li>
+              <li><img src = "IMG_0588.JPG"/></li>
+              <li><img src = "IMG_0589.JPG"/></li>
+              <li><img src = "IMG_0590.JPG"/></li>
+              <li><img src = "IMG_0591.JPG"/></li>
         </div>
       </div>
     </div>
